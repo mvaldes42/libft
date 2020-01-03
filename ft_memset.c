@@ -6,7 +6,7 @@
 /*   By: mvaldes <mvaldes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 13:12:21 by mvaldes           #+#    #+#             */
-/*   Updated: 2019/12/10 12:02:33 by mvaldes          ###   ########.fr       */
+/*   Updated: 2020/01/03 10:57:06 by mvaldes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	char	*start;
 
+	if (b == NULL)
+		return (NULL);
 	start = b;
 	while (len)
 	{

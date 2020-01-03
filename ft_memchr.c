@@ -6,7 +6,7 @@
 /*   By: mvaldes <mvaldes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 15:15:06 by mvaldes           #+#    #+#             */
-/*   Updated: 2019/12/03 13:41:03 by mvaldes          ###   ########.fr       */
+/*   Updated: 2020/01/03 11:01:05 by mvaldes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*src;
 	size_t			i;
 
+	if (s == NULL)
+		return (NULL);
 	src = (void *)s;
 	i = 0;
 	while (i < n)

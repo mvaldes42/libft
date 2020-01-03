@@ -6,7 +6,7 @@
 /*   By: mvaldes <mvaldes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 09:37:46 by mvaldes           #+#    #+#             */
-/*   Updated: 2019/12/10 11:44:51 by mvaldes          ###   ########.fr       */
+/*   Updated: 2020/01/03 11:21:01 by mvaldes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *s1)
 	int		size;
 	int		i;
 
+	if (s1 == NULL)
+		return (NULL);
 	size = 0;
 	while (s1[size])
 		size++;

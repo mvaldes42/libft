@@ -6,7 +6,7 @@
 /*   By: mvaldes <mvaldes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 09:27:38 by mvaldes           #+#    #+#             */
-/*   Updated: 2019/12/10 11:23:35 by mvaldes          ###   ########.fr       */
+/*   Updated: 2020/01/03 11:13:25 by mvaldes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	int i;
 
+	if (s == NULL)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{
