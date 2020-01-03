@@ -6,7 +6,7 @@
 /*   By: mvaldes <mvaldes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 13:53:08 by mvaldes           #+#    #+#             */
-/*   Updated: 2020/01/03 10:59:37 by mvaldes          ###   ########.fr       */
+/*   Updated: 2020/01/03 14:08:20 by mvaldes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*dst_cpy;
 	char	*src_cpy;
 
-	if (dst == NULL && src == NULL)
-		return (dst);
 	if (dst == NULL || src == NULL)
 		return (NULL);
 	dst_cpy = (char *)dst;
