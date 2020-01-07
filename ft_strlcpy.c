@@ -6,7 +6,7 @@
 /*   By: mvaldes <mvaldes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 14:42:12 by mvaldes           #+#    #+#             */
-/*   Updated: 2020/01/03 14:16:54 by mvaldes          ###   ########.fr       */
+/*   Updated: 2020/01/03 15:42:57 by mvaldes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	size;
 
-	if (!dst || !src)
-		return (0);
 	i = 0;
 	size = ft_strlen(src);
-	if (!dstsize)
+	if (!dstsize || dst == NULL)
 		return (size);
+	if (!dst || !src)
+		return (0);
 	while (src[i] && i < dstsize - 1)
 	{
 		dst[i] = src[i];
