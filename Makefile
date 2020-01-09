@@ -6,7 +6,7 @@
 #    By: mvaldes <mvaldes@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/12 11:18:52 by mvaldes           #+#    #+#              #
-#    Updated: 2019/12/03 13:21:54 by mvaldes          ###   ########.fr        #
+#    Updated: 2020/01/07 13:02:15 by mvaldes          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ NAME	= libft.a
 
 RM	= rm -f
 
-.c.o: $(SRCS) $(SRCS_BONUS)
+.c.o: $(SRCS)
 	gcc -Wall -Wextra -Werror -c $^ -o ${^:.c=.o} 
 
 $(NAME):    $(OBJS) libft.h

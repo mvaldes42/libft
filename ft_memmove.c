@@ -6,7 +6,7 @@
 /*   By: mvaldes <mvaldes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 13:53:08 by mvaldes           #+#    #+#             */
-/*   Updated: 2020/01/07 10:44:12 by mvaldes          ###   ########.fr       */
+/*   Updated: 2020/01/09 13:07:17 by mvaldes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,25 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*dst_cpy;
 	char	*src_cpy;
 
-	dst_cpy = (char *)dst;
-	src_cpy = (char *)src;
-	if (dst == NULL && src == NULL)
-		return (NULL);
-	if (dst == NULL || src == NULL || *dst_cpy == *src_cpy)
-		return (dst);
-	i = 0;
-	if (src_cpy < dst_cpy)
-		while (++i <= len)
-			dst_cpy[len - i] = src_cpy[len - i];
-	else
-		while (len-- > 0)
-			*(dst_cpy++) = *(src_cpy++);
-	return (dst);
+	if (dst != NULL && src != NULL && dst != src)
+	{
+		dst_cpy = (char *)dst;
+		src_cpy = (char *)src;
+		if (src_cpy <= dst_cpy)
+		{
+			while (len--)
+				((unsigned char*)dst_cpy)[len] = ((unsigned char*)src_cpy)[len];
+		}
+		else
+		{
+			i = 0;
+			while (i < len)
+			{
+				((unsigned char*)dst_cpy)[i] = ((unsigned char*)src_cpy)[i];
+				i++;
+			}
+		}
+		return (dst_cpy);
+	}
+	return (NULL);
 }

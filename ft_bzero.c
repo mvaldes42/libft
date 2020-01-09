@@ -6,7 +6,7 @@
 /*   By: mvaldes <mvaldes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 13:56:10 by mvaldes           #+#    #+#             */
-/*   Updated: 2019/12/03 13:35:55 by mvaldes          ###   ########.fr       */
+/*   Updated: 2020/01/09 13:16:18 by mvaldes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	if (n == 0)
-		return ;
-	ft_memset(s, 0, n);
+	if (n != 0)
+		ft_memset(s, 0, n);
 }

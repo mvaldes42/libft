@@ -6,7 +6,7 @@
 /*   By: mvaldes <mvaldes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 14:13:32 by mvaldes           #+#    #+#             */
-/*   Updated: 2020/01/07 11:00:28 by mvaldes          ###   ########.fr       */
+/*   Updated: 2020/01/09 14:51:55 by mvaldes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,14 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	tpdst = (unsigned char *)dst;
 	tpsrc = (unsigned char *)src;
-	if (dst == NULL && src == NULL)
-		return (NULL);
-	if (dst == NULL || src == NULL)
-		return (dst);
-	while (n--)
-		*tpdst++ = *tpsrc++;
+	if (dst != NULL && src != NULL && src != dst && n != 0)
+	{
+		while (n--)
+		{
+			*tpdst = *tpsrc;
+			tpdst++;
+			tpsrc++;
+		}
+	}
 	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: mvaldes <mvaldes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 09:48:32 by mvaldes           #+#    #+#             */
-/*   Updated: 2020/01/03 11:14:22 by mvaldes          ###   ########.fr       */
+/*   Updated: 2020/01/09 13:14:39 by mvaldes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,18 @@ char	*ft_strrchr(const char *s, int c)
 {
 	char *str;
 
-	if (s == NULL)
-		return (NULL);
-	str = NULL;
-	while (*s)
+	if (s != NULL)
 	{
+		str = NULL;
+		while (*s)
+		{
+			if (*s == (char)c)
+				str = (char *)s;
+			s++;
+		}
 		if (*s == (char)c)
 			str = (char *)s;
-		s++;
+		return (str);
 	}
-	if (*s == (char)c)
-		str = (char *)s;
-	return (str);
+	return (NULL);
 }

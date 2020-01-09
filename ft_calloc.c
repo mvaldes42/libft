@@ -6,7 +6,7 @@
 /*   By: mvaldes <mvaldes@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 13:38:08 by mvaldes           #+#    #+#             */
-/*   Updated: 2019/12/10 11:34:57 by mvaldes          ###   ########.fr       */
+/*   Updated: 2020/01/09 15:22:04 by mvaldes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,12 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*result;
 
-	if (!(result = malloc(size * count)))
-		return (NULL);
-	ft_bzero(result, size * count);
-	return (result);
+	if (count != 0 && size != 0)
+	{
+		if (!(result = malloc(size * count)))
+			return (NULL);
+		ft_bzero(result, size * count);
+		return (result);
+	}
+	return (malloc(1));
 }
